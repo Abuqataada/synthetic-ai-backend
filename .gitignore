@@ -1,1 +1,18 @@
 .vercel
+# Prevent big files from uploading
+__pycache__/
+*.csv
+*.joblib
+*.pkl
+*.npy
+*.npz
+data/
+datasets/
+models/
+venv/
+.venv/
+.git/
+.DS_Store
+institutional_scaler.joblib
+institutional_vix75_model.joblib
+feature_list.txt
