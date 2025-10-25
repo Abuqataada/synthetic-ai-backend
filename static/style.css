@@ -1,0 +1,66 @@
+/* static/style.css */
+:root {
+  --bg: #0b1020;
+  --card: #111421;
+  --muted: #9aa4b2;
+  --accent: #00d1ff;
+  --buy: #16c784;
+  --sell: #ff4d4f;
+  --hold: #f2c94c;
+}
+
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  background: linear-gradient(180deg, var(--bg) 0%, #06070b 100%);
+  color: #e7eef6;
+}
+
+.app {
+  max-width: 1000px;
+  margin: 28px auto;
+  padding: 18px;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 18px;
+}
+
+h1 { margin: 0; font-size: 1.15rem; color: var(--accent); }
+.meta { display:flex; gap:10px; align-items:center; }
+#refreshBtn { background: transparent; border: 1px solid var(--accent); color: var(--accent); padding: 8px 12px; border-radius: 8px; cursor:pointer; }
+#lastUpdated { color: var(--muted); font-size: 0.9rem; }
+
+.signal-card {
+  display:flex;
+  justify-content:space-between;
+  background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+  border: 1px solid rgba(255,255,255,0.03);
+  padding: 14px;
+  border-radius: 12px;
+  align-items:center;
+}
+
+.signal-left { display:flex; flex-direction:column; gap:6px; }
+.signal-text { font-size: 2rem; font-weight: 700; }
+.signal-text.buy { color: var(--buy); }
+.signal-text.sell { color: var(--sell); }
+.signal-text.hold { color: var(--hold); }
+.confidence { color: var(--muted); }
+
+.signal-right { text-align:right; }
+.price { font-weight: 600; }
+.model-ver { color: var(--muted); font-size: 0.9rem; }
+
+.chart-section { margin-top: 18px; background: var(--card); padding: 12px; border-radius: 10px; }
+canvas { width: 100% !important; height: 320px !important; }
+
+.history { margin-top: 18px; background: var(--card); padding: 12px; border-radius: 10px; }
+.history ul { list-style: none; padding: 0; margin: 0; max-height: 200px; overflow:auto; }
+.history li { padding: 8px 6px; border-bottom: 1px solid rgba(255,255,255,0.02); display:flex; justify-content:space-between; }
+
+footer { margin-top: 18px; color: var(--muted); font-size: 0.85rem; text-align:center; }

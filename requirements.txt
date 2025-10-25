@@ -1,0 +1,24 @@
+# Core Web Framework
+Flask
+
+# Data Handling & Math
+pandas
+numpy
+scikit-learn
+
+# Model Persistence
+joblib
+
+# Machine Learning Models
+xgboost
+lightgbm
+
+# WebSocket Client for Deriv API
+websocket-client
+
+# Optional but recommended for production
+requests
+gunicorn
+
+# (Optional) For better date/time operations
+python-dateutil
