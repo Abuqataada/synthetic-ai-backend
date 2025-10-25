@@ -61,3 +61,9 @@ dump(stack, "institutional_vix75_model.joblib")
 dump(scaler, "institutional_scaler.joblib")
 print("Saved model and scaler for live prediction.")
 print("Institutional Ensemble AI training complete.")
+
+# After training and saving model
+feature_list = list(X.columns)
+with open("feature_list.txt", "w") as f:
+    f.write("\n".join(feature_list))
+print("Feature list saved as feature_list.txt")

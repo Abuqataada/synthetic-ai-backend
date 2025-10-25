@@ -1,0 +1,14 @@
+# Prevent big files from uploading
+__pycache__/
+*.csv
+*.joblib
+*.pkl
+*.npy
+*.npz
+data/
+datasets/
+models/
+venv/
+.venv/
+.git/
+.DS_Store

@@ -1,49 +1,29 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>VIX75 · AI Signal Dashboard</title>
-  <link rel="stylesheet" href="/static/style.css" />
-  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <meta charset="UTF-8">
+    <title>VIX75 Institutional AI Signals</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 <body>
-  <div class="app">
-    <header>
-      <h1>VIX75 — Institutional AI Signals</h1>
-      <div class="meta">
-        <button id="refreshBtn">Refresh</button>
-        <div id="lastUpdated">—</div>
-      </div>
-    </header>
-
-    <main>
-      <section class="signal-card" id="signalCard">
-        <div class="signal-left">
-          <div id="signalText" class="signal-text">—</div>
-          <div id="confidence" class="confidence">Confidence: —</div>
+    <div class="container">
+        <h1>VIX75 AI Trading Terminal</h1>
+        <div id="signal-card" class="card">
+            <h2 id="signal">Loading...</h2>
+            <p id="confidence">Confidence: --%</p>
+            <p id="latest-close">Latest Price: --</p>
+            <p id="updated">Updated: --</p>
         </div>
-        <div class="signal-right">
-          <div id="price" class="price">Price: —</div>
-          <div id="modelVer" class="model-ver">Model: —</div>
+
+        <div class="chart-container">
+            <canvas id="probChart"></canvas>
         </div>
-      </section>
 
-      <section class="chart-section">
-        <canvas id="priceChart"></canvas>
-      </section>
+        <button id="refresh-btn">🔄 Refresh Signal</button>
+    </div>
 
-      <section class="history">
-        <h3>Recent Signals</h3>
-        <ul id="historyList"></ul>
-      </section>
-    </main>
-
-    <footer>
-      <small>Signals are informational — not trading advice. Paper-trade & verify before live capital.</small>
-    </footer>
-  </div>
-
-  <script src="/static/script.js"></script>
+    <script src="/static/script.js"></script>
 </body>
 </html>
