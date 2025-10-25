@@ -12,3 +12,6 @@ venv/
 .venv/
 .git/
 .DS_Store
+institutional_scaler.joblib
+institutional_vix75_model.joblib
+feature_list.txt
